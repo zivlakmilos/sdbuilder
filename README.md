@@ -4,8 +4,6 @@ Smart document builder is command line tool that allow user to convert documents
 
 > Important! Still under development.
 
----
-
 ## Installation and requirements
 
 ### Requirements
@@ -26,8 +24,6 @@ Yarn
 yarn add sdbuilder
 ```
 
----
-
 ## Manual
 
 ### Create project
@@ -41,8 +37,6 @@ sdbuilder --create-project
 ```bash
 sdbuilder
 ```
-
----
 
 ## Development
 
