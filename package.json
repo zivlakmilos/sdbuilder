@@ -2,9 +2,11 @@
   "name": "sdbuilder",
   "version": "1.0.0",
   "description": "Smart Document Builder",
+  "type": "module",
   "main": "src/cli.js",
+  "exports": "src/cli.js",
   "bin": {
-    "sdbuilder": "bin/sdbuilder"
+    "sdbuilder": "bin/sdbuilder.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,6 +1,8 @@
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers'
 
+import { createProject } from './create-project.js';
+
 const parseArgumentsIntoOptions = (rawArgs) => {
   const args = yargs(hideBin(rawArgs))
     .usage('Usage: sdbuilder [options]')
@@ -21,9 +23,9 @@ const parseArgumentsIntoOptions = (rawArgs) => {
 
 export const cli = async (args) => {
   const options = parseArgumentsIntoOptions(args);
-  console.log(options);
 
-  if (options['--create-project']) {
+  if (options['create-project']) {
+    await createProject();
     return;
   }
 }
