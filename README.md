@@ -48,12 +48,12 @@ sdbuilder
 
 ### ToDo
 
-- [ ] Project generator system
+- [x] Project generator system
 
 - [ ] Project compiler
 
 - [ ] Basic template
 
-- [ ] CLI Help
+- [x] CLI Help
 
 - [ ] Add completion script for CLI ussing yargs
