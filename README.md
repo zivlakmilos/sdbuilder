@@ -1,1 +1,63 @@
 # Smart Document Builder
+
+Smart document builder is command line tool that allow user to convert documents from markdown into PDF and HTML. Shipped with predefined template for various type of documents.
+
+> Important! Still under development.
+
+---
+
+## Installation and requirements
+
+### Requirements
+
+Require pandoc to be installed on system in order to be able to use it.
+
+### Installation
+
+NPM:
+
+```bash
+npm install --save sdbuilder
+```
+
+Yarn
+
+```bash
+yarn add sdbuilder
+```
+
+---
+
+## Manual
+
+### Create project
+
+```bash
+sdbuilder --create-project
+```
+
+### Compile project
+
+```bash
+sdbuilder
+```
+
+---
+
+## Development
+
+
+
+### Changelog
+
+
+
+### ToDo
+
+- [ ] Project generator system
+
+- [ ] Project compiler
+
+- [ ] Basic template
+
+- [ ] Help
