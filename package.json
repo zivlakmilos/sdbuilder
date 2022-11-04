@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/zivlakmilos/sdbuilder#readme",
   "dependencies": {
-    "arg": "^5.0.2",
     "esm": "^3.2.25",
     "fs-extra": "^10.1.0",
     "inquirer": "^9.1.4",
-    "node-pandoc": "^0.3.0"
+    "node-pandoc": "^0.3.0",
+    "yargs": "^17.6.2"
   }
 }

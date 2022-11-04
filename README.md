@@ -54,4 +54,6 @@ sdbuilder
 
 - [ ] Basic template
 
-- [ ] Help
+- [ ] CLI Help
+
+- [ ] Add completion script for CLI ussing yargs
