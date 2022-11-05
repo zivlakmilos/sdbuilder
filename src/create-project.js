@@ -35,5 +35,5 @@ export const createProject = async (name) => {
   const dirTo = path.resolve(answares.name);
   fse.copySync(dirFrom, dirTo);
 
-  console.log('Project created');
+  console.log('Project created!');
 }

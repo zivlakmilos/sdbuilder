@@ -126,6 +126,34 @@ const compileHtml = async (project) => {
 }
 
 const compilePdf = async (project) => {
+  const src = project.sources.join(' ');
+  const args = [
+    '-f', project.format === 'markdown' ? 'markdown+rebase_relative_paths' : project.format,
+    '-t', 'pdf',
+    '--template', path.join(project.pdf.template, 'template.tex'),
+    '-s',
+    '-o', path.join(project.outputFolder, project.pdf.outputFolder, project.pdf.outputFileName),
+    '--listings',
+    '-V lang=rs-SR'
+    //'--pdf-engine', 'xelatex',
+  ];
+
+  if (project.toc) {
+    args.push('--toc');
+  }
+
+  if (project.bibliography) {
+    args.push('--bibliography');
+    args.push(project.bibliography);
+    args.push('--citeproc')
+  }
+  if (project.biblatex) {
+    args.push('--biblatex');
+  }
+
+  fse.mkdirSync(path.join(project.outputFolder, project.pdf.outputFolder), { recursive: true });
+
+  await pandoc(src, args, err => console.log(err));
 }
 
 export const compile = async () => {

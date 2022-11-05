@@ -50,9 +50,9 @@ sdbuilder
 
 - [x] Project generator system
 
-- [ ] Project compiler
+- [x] Project compiler
 
-- [ ] Basic template
+- [x] Basic template
 
 - [x] CLI Help
 

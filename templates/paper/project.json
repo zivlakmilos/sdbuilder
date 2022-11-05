@@ -22,6 +22,8 @@
     "template": "template/html/"
   },
   "pdf": {
-    "outputFolder": "pdf"
+    "outputFolder": "pdf",
+    "template": "template/pdf/",
+    "outputFileName": "document.pdf"
   }
 }
