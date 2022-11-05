@@ -15,13 +15,13 @@ Require pandoc to be installed on system in order to be able to use it.
 NPM:
 
 ```bash
-npm install --save sdbuilder
+npm install --save smart-document-builder
 ```
 
 Yarn
 
 ```bash
-yarn add sdbuilder
+yarn add smart-document-builder
 ```
 
 ## Manual

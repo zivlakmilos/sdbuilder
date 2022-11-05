@@ -7,6 +7,10 @@ description: Doc Description?
 website: https://www.npmjs.com/package/sdbuilder?
 github: https://github.com/zivlakmilos/sdcbuilder?
 pdf: paper.pdf?
+
+titlepage: true
+toc-own-page: true
+listings: true
 ---
 
 # Title
