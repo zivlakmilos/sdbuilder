@@ -2,6 +2,7 @@ import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers'
 
 import { createProject } from './create-project.js';
+import { compile } from './compiler.js';
 
 const parseArgumentsIntoOptions = (rawArgs) => {
   const args = yargs(hideBin(rawArgs))
@@ -28,4 +29,6 @@ export const cli = async (args) => {
     await createProject();
     return;
   }
+
+  await compile();
 }

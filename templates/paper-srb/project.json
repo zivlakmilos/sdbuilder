@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "author": "",
+  "version": "",
+  "format": "markdown",
+  "toc": "true",
+  "bibliography": "src/bibliography.bib",
+  "sources": [
+    "src/test.md"
+  ],
+  "assets": [
+    "assets",
+    "src/assets"
+  ],
+  "outputFolder": "build",
+  "targets": [
+    "html",
+    "pdf"
+  ],
+  "html": {
+    "outputFolder": "html",
+    "template": "template/html/"
+  },
+  "pdf": {
+    "outputFolder": "pdf"
+  }
+}
