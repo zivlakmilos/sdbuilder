@@ -1,13 +1,30 @@
 diff --git a/node_modules/node-pandoc/index.js b/node_modules/node-pandoc/index.js
-index 7b5e899..d87ec39 100644
+index 7b5e899..51735ec 100644
 --- a/node_modules/node-pandoc/index.js
 +++ b/node_modules/node-pandoc/index.js
-@@ -35,7 +35,7 @@ module.exports = function() {
- 
-   onStatCheck = function (err, stats) {
-     // If src is a file or valid web URL, push the src back into args array
--    if ((stats && stats.isFile()) || isURL) {
-+    if ((stats && stats.isFile()) || isURL || true) {   // TODO: Temporarly fix for multiple files
+@@ -39,11 +39,17 @@ module.exports = function() {
        args.unshift(src);
      }
  
++    if (Array.isArray(src)) {
++      src.forEach(el => {
++        args.push(el);
++      });
++    }
++
+     // Create child_process.spawn
+     pdSpawn = spawn('pandoc', args, options);
+ 
+     // If src is not a file, assume a string input.
+-    if ((typeof stats === "undefined") && !isURL) {
++    if ((typeof stats === "undefined") && !isURL && !Array.isArray(src)) {
+       pdSpawn.stdin.end(src, 'utf-8');
+     }
+ 
+@@ -81,5 +87,5 @@ module.exports = function() {
+   }
+ 
+   // Check file status of src
+-  stat(src, onStatCheck);
++  stat(Array.isArray(src) ? src.join(' ') : src, onStatCheck);
+ };

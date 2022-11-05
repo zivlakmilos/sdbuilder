@@ -94,7 +94,7 @@ const postProcessHtml = async (project) => {
 }
 
 const compileHtml = async (project) => {
-  const src = project.sources.join(' ');
+  const src = project.sources;
   const args = [
     '-f', project.format,
     '-t', 'html',
@@ -126,7 +126,7 @@ const compileHtml = async (project) => {
 }
 
 const compilePdf = async (project) => {
-  const src = project.sources.join(' ');
+  const src = project.sources;
   const args = [
     '-f', project.format === 'markdown' ? 'markdown+rebase_relative_paths' : project.format,
     '-t', 'pdf',
