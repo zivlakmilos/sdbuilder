@@ -10,6 +10,7 @@ pdf: paper.pdf?
 
 titlepage: true
 toc-own-page: true
+toc-title: Sadržaj
 listings: true
 ---
 

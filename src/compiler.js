@@ -120,7 +120,7 @@ const compileHtml = async (project) => {
   fse.mkdirSync(path.join(project.outputFolder, project.html.outputFolder, 'assets'), { recursive: true });
   copyAssets(project.outputFolder, project.html, project.assets);
 
-  await pandoc(src, args);
+  await pandoc(src, args, err => console.log(err));
 
   await postProcessHtml(project);
 }
