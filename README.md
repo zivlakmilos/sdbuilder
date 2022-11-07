@@ -12,16 +12,8 @@ Require pandoc to be installed on system in order to be able to use it.
 
 ### Installation
 
-NPM:
-
 ```bash
-npm install --save smart-document-builder
-```
-
-Yarn
-
-```bash
-yarn add smart-document-builder
+sudo npm install -g smart-document-builder
 ```
 
 ## Manual
@@ -38,13 +30,17 @@ sdbuilder --create-project
 sdbuilder
 ```
 
+### Display help
+
+```bash
+sdbuilder --help
+```
+
+
+
 ## Development
 
-
-
 ### Changelog
-
-
 
 ### ToDo
 

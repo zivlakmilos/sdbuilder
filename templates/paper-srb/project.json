@@ -6,7 +6,7 @@
   "toc": "true",
   "bibliography": "src/bibliography.bib",
   "sources": [
-    "src/test.md"
+    "src/00-doc.md"
   ],
   "assets": [
     "assets",

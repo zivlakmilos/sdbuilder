@@ -80,8 +80,6 @@ $$
 
 ## Slika
 
-![](assets/13d580cb96dd15b24c1802b4f0236c3a10b6b168.jpg)
-
-: Naslov slike
+![Naslov slike](assets/13d580cb96dd15b24c1802b4f0236c3a10b6b168.jpg)
 
 # Reference

@@ -1,8 +1,13 @@
 diff --git a/node_modules/node-pandoc/index.js b/node_modules/node-pandoc/index.js
-index 7b5e899..51735ec 100644
+index 7b5e899..97b5b7e 100644
 --- a/node_modules/node-pandoc/index.js
 +++ b/node_modules/node-pandoc/index.js
-@@ -39,11 +39,17 @@ module.exports = function() {
+@@ -35,15 +35,21 @@ module.exports = function() {
+ 
+   onStatCheck = function (err, stats) {
+     // If src is a file or valid web URL, push the src back into args array
+-    if ((stats && stats.isFile()) || isURL) {
++    if (((stats && stats.isFile()) || isURL) && !Array.isArray(src)) {
        args.unshift(src);
      }
  
