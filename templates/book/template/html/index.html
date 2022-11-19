@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.png" rel="icon" />
+<title>$title$ | $author$</title>
+$if(description)$<meta name="description" content="$description$">$endif$
+$if(author)$<meta name="author" content="$author$">$endif$
+
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="vendor/highlight.js/styles/github.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+		
+		<!-- Logo --> 
+        <a class="logo ml-md-3" href="#" title="$title$"> <img src="$logo$" alt="$title$"/> </a> 
+        <!-- Logo End -->
+        
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          $if(twitter)$<li class="social-icons-twitter"><a data-toggle="tooltip" href="$twitter$" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>$endif$
+          $if(github)$<li class="social-icons-github"><a data-toggle="tooltip" href="$github$" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>$endif$
+          $if(linkedin)$<li class="social-icons-linkedin"><a data-toggle="tooltip" href="$linkedin$" target="_blank" title="" data-original-title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>$endif$
+          $if(website)$<li class="social-icons-dribbble"><a data-toggle="tooltip" href="$website$" target="_blank" title="" data-original-title="Website"><i class="fab fa-dribbble"></i></a></li>$endif$
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End --> 
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+    
+	<!-- Sidebar Navigation
+	============================ -->
+	<div id="sdbuilder-toc" class="idocs-navigation bg-light">
+      $toc$
+    </div>
+    
+    <!-- Docs Content
+	============================ -->
+    <div id="sdbuilder-title" class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+		============================ -->
+        <section id="idocs_start">
+        <h1>$title$</h1>
+        $if(subtitle)$<h2>$subtitle$</h2>$endif$
+        $if(description)$<p class="lead">$description$</p>$endif$
+		<hr>
+		<div class="row">
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong>Author:</strong> <a href="$if(website)$$website$$else$#$endif$" target="_blank">$author$</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+          <li><strong class="font-weight-700">Date:</strong> <span id="sdbuilder-date">$date$</span></li>
+				</ul>
+			</div>
+		</div>
+        $if(pdf)$<p class="alert alert-info"><a target="_blank" href="$pdf$">Get PDF</a> for offline reading.</p>$endif$
+        </section>
+        
+		<hr class="divider">
+
+    <div id="sdbuilder-body">
+      $body$
+    </div>
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        $if(twitter)$<li><a data-toggle="tooltip" href="$twitter$" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>$endif$
+        $if(github)$<li><a data-toggle="tooltip" href="$github$" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>$endif$
+        $if(linkedin)$<li><a data-toggle="tooltip" href="$linkedin$" target="_blank" title="" data-original-title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>$endif$
+        $if(website)$<li><a data-toggle="tooltip" href="$website$" target="_blank" title="" data-original-title="Website"><i class="fab fa-dribbble"></i></a></li>$endif$
+      </ul>
+      <p class="text-center">Copyright &copy; <span id="sdbuilder-copyright-year">$date$</span> <a href="$if(website)$$website$$else$#$endif$">$author$</a>. All Rights Reserved.</p>
+	  <p class="text-2 text-center mb-0">Genereted by <a class="btn-link" target="_blank" href="https://github.com/zivlakmilos/sdbuilder">Smart Document Builder</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Highlight JS -->
+<script src="vendor/highlight.js/highlight.min.js"></script> 
+<!-- Easing --> 
+<script src="vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Custom Script -->
+<script src="js/theme.js"></script>
+</body>
+</html>
