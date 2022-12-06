@@ -1,6 +1,6 @@
 {
   "name": "smart-document-builder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Smart Document Builder",
   "type": "module",
   "main": "src/cli.js",

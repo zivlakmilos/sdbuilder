@@ -24,6 +24,9 @@
   "pdf": {
     "outputFolder": "pdf",
     "template": "template/pdf/",
-    "outputFileName": "document.pdf"
+    "outputFileName": "document.pdf",
+    "args": [
+      "--top-level-division=chapter"
+    ]
   }
 }

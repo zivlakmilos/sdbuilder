@@ -95,13 +95,21 @@ const postProcessHtml = async (project) => {
 
 const compileHtml = async (project) => {
   const src = project.sources;
-  const args = [
+  let args = [
     '-f', project.format,
     '-t', 'html',
     '--template', path.join(project.html.template, 'index.html'),
     '-s',
     '-o', path.join(project.outputFolder, project.html.outputFolder, 'index.html'),
   ];
+
+  if (project.html.args) {
+    args = [
+      ...args,
+      ...project.html.args,
+    ]
+  }
+
 
   if (project.toc) {
     args.push('--toc');
@@ -127,7 +135,7 @@ const compileHtml = async (project) => {
 
 const compilePdf = async (project) => {
   const src = project.sources;
-  const args = [
+  let args = [
     '-f', project.format === 'markdown' ? 'markdown+rebase_relative_paths' : project.format,
     '-t', 'pdf',
     '--template', path.join(project.pdf.template, 'template.tex'),
@@ -137,6 +145,13 @@ const compilePdf = async (project) => {
     '-V lang=rs-SR'
     //'--pdf-engine', 'xelatex',
   ];
+
+  if (project.pdf.args) {
+    args = [
+      ...args,
+      ...project.pdf.args,
+    ]
+  }
 
   if (project.toc) {
     args.push('--toc');
